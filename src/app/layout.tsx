@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Heebo } from "next/font/google";
+import { Barlow, Heebo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 
-const inter = Heebo({ subsets: ["latin"] });
+const barlow = Barlow({
+  subsets: ["latin"],
+  variable: "--text-2",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  relative`}>
+      <body className={`${barlow.className}`}>
         <main className="relative">
           <div>
             <Navbar />
