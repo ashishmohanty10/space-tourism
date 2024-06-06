@@ -1,12 +1,12 @@
 import Image from "next/image";
-import HomeBG from "../../public/home/background-home-desktop.jpg";
-
+import HomeBGDesktop from "../../public/home/background-home-desktop.jpg";
+import HomeBGTablet from "../../public/home/background-home-tablet.jpg";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <HomePageBG />
 
-      <div className="w-full flex justify-between items-center h-[80vh] text-white">
+      <div className="w-full lg:flex justify-between items-center h-[80vh] text-white">
         <div className="w-1/2">
           <h2 className="uppercase text-sm mb-5">So, you want to travel to </h2>
 
@@ -35,9 +35,15 @@ export const HomePageBG = () => {
   return (
     <div className="absolute top-0 left-0 w-full -z-20">
       <Image
-        src={HomeBG}
+        src={HomeBGDesktop}
         alt="homepage background"
-        className="max-h-screen w-full object-cover"
+        className="hidden max-h-screen w-full object-cover lg:block"
+      />
+
+      <Image
+        src={HomeBGTablet}
+        alt="homepage background for tablet"
+        className="min-h-screen object-fill lg:hidden w-full"
       />
     </div>
   );
