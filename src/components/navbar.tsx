@@ -1,23 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../public/shared/logo.svg";
 import Image from "next/image";
+import HamburgerIcon from "../../public/shared/icon-hamburger.svg";
+import Closehamburger from "../../public/shared/icon-close.svg";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const handleNavBar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-    <header className="flex justify-between items-center h-32 relative px-20 ">
+    <header className="flex justify-between items-center h-32 relative px-14 ">
       <Link href={"/"}>
         <Image src={Logo} alt="Logo of the brand" sizes="40" />
       </Link>
 
-      <div className="h-0.5 bg-slate-500 w-[98vh] left-48 absolute z-10"></div>
+      <div className="hidden xl:block h-0.5 bg-slate-500 w-[98vh] left-48 absolute z-10"></div>
 
-      <nav className="flex items-center  gap-x-10 py-4 px-20 backdrop-blur-lg absolute  right-0 h-[10vh]">
+      <nav className="hidden xl:flex items-center gap-x-10 py-4 px-20 backdrop-blur-lg absolute right-0 h-[10vh]">
         {navLink.map((data, idx) => (
           <Link
             href={data.href}
@@ -33,6 +41,40 @@ const Navbar = () => {
           </Link>
         ))}
       </nav>
+
+      {/* mobile nav */}
+      <div className="lg:hidden relative  backdrop-blur-lg">
+        <div onClick={handleNavBar}>
+          {isNavOpen ? (
+            <Image src={Closehamburger} alt="Hamburger Icon" />
+          ) : (
+            <Image src={HamburgerIcon} alt="Hamburger Icon" />
+          )}
+        </div>
+
+        <nav className="absolute  top-12 right-2 z-20">
+          {isNavOpen ? (
+            <div className="flex flex-col justify-between gap-y-10">
+              {navLink.map((data, idx) => (
+                <Link
+                  href={data.href}
+                  className={cn(
+                    `flex space-x-2 items-center text-slate-200 uppercase tracking-widest text-sm  ${
+                      pathname === data.href ? "border-b border-slate-400" : ""
+                    }`
+                  )}
+                  key={idx}
+                >
+                  <span className="">{data.number}</span>
+                  <span className="text-normal">{data.label}</span>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
+        </nav>
+      </div>
     </header>
   );
 };

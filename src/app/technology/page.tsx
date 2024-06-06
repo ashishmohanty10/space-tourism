@@ -22,6 +22,12 @@ const TechnologyBG = () => {
         alt="destination bg"
         className="max-h-screen w-full object-cover"
       />
+
+      <Image
+        src={Technologymobile}
+        alt="homepage background for tablet"
+        className="min-h-screen object-fill lg:hidden w-full"
+      />
     </div>
   );
 };

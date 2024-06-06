@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${barlow.className}`}>
-        <main className="relative">
+        <main className="relative flex flex-col justify-between ">
           <div>
             <Navbar />
           </div>
