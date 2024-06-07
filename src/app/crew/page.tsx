@@ -18,9 +18,21 @@ const CrewBG = () => {
   return (
     <div className="absolute top-0 right-0 w-full -z-20">
       <Image
+        src={CrewMobile}
+        alt="homepage background for tablet"
+        className="min-h-screen object-cover md:hidden w-full"
+      />
+
+      <Image
+        src={CrewTablet}
+        alt="homepage background for tablet"
+        className="hidden min-h-screen object-cover xl:hidden w-full"
+      />
+
+      <Image
         src={CrewDesktop}
-        alt="destination bg"
-        className="max-h-screen w-full object-cover"
+        alt="homepage background"
+        className="hidden max-h-screen w-full object-cover xl:block"
       />
     </div>
   );

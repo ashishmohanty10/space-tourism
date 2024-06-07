@@ -18,15 +18,21 @@ const TechnologyBG = () => {
   return (
     <div className="absolute top-0 right-0 w-full -z-20">
       <Image
-        src={TechnologyDesktop}
-        alt="destination bg"
-        className="max-h-screen w-full object-cover"
+        src={Technologymobile}
+        alt="homepage background for tablet"
+        className="min-h-screen object-cover md:hidden w-full"
       />
 
       <Image
         src={Technologymobile}
         alt="homepage background for tablet"
-        className="min-h-screen object-fill lg:hidden w-full"
+        className="hidden min-h-screen object-cover xl:hidden w-full"
+      />
+
+      <Image
+        src={TechnologyDesktop}
+        alt="homepage background"
+        className="hidden max-h-screen w-full object-cover xl:block"
       />
     </div>
   );
