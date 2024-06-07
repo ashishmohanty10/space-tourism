@@ -26,7 +26,7 @@ const CrewBG = () => {
       <Image
         src={CrewTablet}
         alt="homepage background for tablet"
-        className="hidden min-h-screen object-cover xl:hidden w-full"
+        className="hidden md:block min-h-screen object-cover xl:hidden w-full"
       />
 
       <Image

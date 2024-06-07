@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <HomePageBG />
 
-      <div className="w-full xl:flex justify-between items-center h-[80vh] text-white mt-12 lg:mt-0">
+      <div className="w-full xl:flex justify-between items-center h-[80vh] text-white md:mt-44 xl:mt-0">
         <div className="xl:w-1/2 flex flex-col justify-between items-center xl:items-start mb-14 xl:mb-0">
           <h2 className="uppercase text-lg lg:text-sm mb-10">
             So, you want to travel to
@@ -23,8 +23,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="xl:w-1/2 flex justify-center">
-          <div className=" w-52 h-52 bg-white rounded-full flex items-center justify-center text-black">
+        <div className="xl:w-1/2 flex justify-center md:mt-60 xl:mt-0">
+          <div className=" w-56 h-56 bg-white rounded-full flex items-center justify-center text-black">
             <p className="text-2xl md:text-4xl font-bold tracking-widest">
               EXPLORE
             </p>
@@ -48,7 +48,7 @@ export const HomePageBG = () => {
       <Image
         src={HomeBGTablet}
         alt="homepage background for tablet"
-        className="hidden min-h-screen object-cover xl:hidden w-full"
+        className="hidden md:block min-h-screen object-cover xl:hidden w-full"
       />
 
       <Image

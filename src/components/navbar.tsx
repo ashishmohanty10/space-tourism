@@ -43,7 +43,7 @@ const Navbar = () => {
       </nav>
 
       {/* mobile nav */}
-      <div className="lg:hidden relative  backdrop-blur-lg">
+      <div className="xl:hidden relative  backdrop-blur-lg">
         <div onClick={handleNavBar}>
           {isNavOpen ? (
             <Image src={Closehamburger} alt="Hamburger Icon" />
