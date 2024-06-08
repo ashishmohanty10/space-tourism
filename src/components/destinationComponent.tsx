@@ -12,8 +12,8 @@ const DestinationComponent: React.FC<DestinationComponentProp> = ({ data }) => {
   const [currentTabs, setCurrentTabs] = useState(0);
 
   return (
-    <div>
-      <div className="flex xl:justify-end justify-center gap-x-20 xl:-w-[50%] xl:pr-12 mb-10">
+    <div className="px-36 mx-auto">
+      <div className="flex xl:justify-end justify-center gap-x-14 xl:-w-[50%]  mb-10">
         {data.map((data, idx) => (
           <div key={idx}>
             <button
@@ -36,7 +36,7 @@ const DestinationComponent: React.FC<DestinationComponentProp> = ({ data }) => {
             key={idx}
             className={cn(`${currentTabs === idx ? "" : "hidden"}`)}
           >
-            <div className="xl:flex justify-between gap-x-80 w-full">
+            <div className="xl:flex justify-between gap-x-72 w-full">
               <div className="xl:w-1/2  flex justify-center items-center mb-10 xl:mb-0">
                 <Image
                   src={data.images.webp}

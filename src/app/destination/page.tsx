@@ -21,7 +21,7 @@ const DestinationPage = () => {
       </div>
 
       {/* destinaion */}
-      <div className="text-white flex mt-10">
+      <div className="text-white flex mt-10 ">
         <DestinationComponent data={destinations} />
       </div>
     </div>

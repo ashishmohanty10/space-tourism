@@ -11,7 +11,7 @@ const Crewpage = () => {
     <div>
       <CrewBG />
 
-      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36">
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 mb-20">
         <span className="text-xl font-extrabold text-gray-500 tracking-widest">
           02
         </span>
@@ -20,7 +20,7 @@ const Crewpage = () => {
         </p>
       </div>
 
-      <div>
+      <div className="px-36 mx-auto">
         <CrewComponent data={crew} />
       </div>
     </div>
@@ -47,7 +47,7 @@ const CrewBG = () => {
       <Image
         src={CrewDesktop}
         alt="homepage background"
-        className="hidden max-h-screen w-full object-cover xl:block"
+        className="hidden min-h-screen w-full object-cover xl:block"
       />
     </div>
   );

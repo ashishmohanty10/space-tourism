@@ -3,11 +3,26 @@ import TechnologyDesktop from "../../../public/technology/background-technology-
 import TechnologyTablet from "../../../public/technology/background-technology-tablet.jpg";
 import Technologymobile from "../../../public/technology/background-technology-mobile.jpg";
 import Image from "next/image";
+import TechnologuComponent from "@/components/technolgyComponents";
+import { technology } from "@/data";
 
 const Crewpage = () => {
   return (
     <div>
       <TechnologyBG />
+
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 mb-20">
+        <span className="text-xl font-extrabold text-gray-500 tracking-widest">
+          03
+        </span>
+        <p className="text-white font-normal text-xl tracking-widest uppercase">
+          space launch 101
+        </p>
+      </div>
+
+      <div>
+        <TechnologuComponent data={technology} />
+      </div>
     </div>
   );
 };

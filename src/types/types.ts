@@ -20,3 +20,12 @@ export type CrewMemberProp = {
   role: string;
   bio: string;
 };
+
+export type TechnologyProp = {
+  name: string;
+  images: {
+    portrait: StaticImageData;
+    landscape: StaticImageData;
+  };
+  description: string;
+};
