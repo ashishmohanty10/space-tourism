@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <div className="xl:w-1/2 flex justify-center md:mt-60 xl:mt-0">
-          <div className=" w-56 h-56 bg-white rounded-full flex items-center justify-center text-black">
+          <div className="w-72 h-72 xl:w-56 xl:h-56 bg-white rounded-full flex items-center justify-center text-black">
             <p className="text-2xl md:text-4xl font-bold tracking-widest">
               EXPLORE
             </p>

@@ -11,7 +11,7 @@ const DestinationPage = () => {
     <div>
       <DestinationBG />
 
-      <div className="flex  items-center gap-x-5 px-36">
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36">
         <span className="text-xl font-extrabold text-gray-500 tracking-widest">
           01
         </span>
