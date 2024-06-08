@@ -8,6 +8,8 @@ const Crewpage = () => {
   return (
     <div>
       <CrewBG />
+
+      <div></div>
     </div>
   );
 };

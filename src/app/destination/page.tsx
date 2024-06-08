@@ -3,11 +3,27 @@ import DestinationDesktop from "../../../public/destination/background-destinati
 import DestinationTablet from "../../../public/destination/background-destination-tablet.jpg";
 import DestinationMobile from "../../../public/destination/background-destination-mobile.jpg";
 import Image from "next/image";
+import { destinations } from "@/data";
+import DestinationComponent from "@/components/destinationComponent";
 
 const DestinationPage = () => {
   return (
     <div>
       <DestinationBG />
+
+      <div className="flex  items-center gap-x-5 px-36">
+        <span className="text-xl font-extrabold text-gray-500 tracking-widest">
+          01
+        </span>
+        <p className="text-white font-normal text-xl tracking-widest">
+          PICK YOUR DESTINATION
+        </p>
+      </div>
+
+      {/* destinaion */}
+      <div className="text-white flex mt-10">
+        <DestinationComponent data={destinations} />
+      </div>
     </div>
   );
 };

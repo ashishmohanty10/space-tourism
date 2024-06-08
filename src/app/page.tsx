@@ -4,7 +4,7 @@ import HomeBGTablet from "../../public/home/background-home-tablet.jpg";
 import HomeBGMobile from "../../public/home/background-home-mobile.jpg";
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <HomePageBG />
 
       <div className="w-full xl:flex justify-between items-center h-[80vh] text-white md:mt-44 xl:mt-0">
