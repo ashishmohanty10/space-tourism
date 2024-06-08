@@ -12,7 +12,7 @@ interface CrewComponentProp {
 const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
   const [currentTabs, setCurrentTabs] = useState(0);
   return (
-    <div>
+    <div className="">
       <div>
         {data.map((data, idx) => (
           <div
@@ -26,7 +26,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
               <Image
                 src={data?.images.webp}
                 alt="crew image"
-                className="w-[500px] h-[500px] object-contain"
+                className="object-contain w-[600px] h-[800px]"
               />
             </div>
           </div>
