@@ -15,8 +15,8 @@ const DestinationPage = () => {
         <span className="text-xl font-extrabold text-gray-500 tracking-widest">
           01
         </span>
-        <p className="text-white font-normal text-xl tracking-widest">
-          PICK YOUR DESTINATION
+        <p className="text-white font-normal text-xl tracking-widest uppercase">
+          pick your destinaion
         </p>
       </div>
 

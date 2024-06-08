@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export type DataProp = {
+export type DestinationProps = {
   name: string;
   images: {
     png: StaticImageData;
@@ -9,4 +9,14 @@ export type DataProp = {
   description: string;
   distance: string;
   travel: string;
+};
+
+export type CrewMemberProp = {
+  name: string;
+  images: {
+    png: StaticImageData;
+    webp: StaticImageData;
+  };
+  role: string;
+  bio: string;
 };

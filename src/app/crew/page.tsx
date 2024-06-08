@@ -3,13 +3,26 @@ import CrewDesktop from "../../../public/crew/background-crew-desktop.jpg";
 import CrewTablet from "../../../public/crew/background-crew-tablet.jpg";
 import CrewMobile from "../../../public/crew/background-crew-mobile.jpg";
 import Image from "next/image";
+import CrewComponent from "@/components/crewComponents";
+import { crew } from "@/data";
 
 const Crewpage = () => {
   return (
     <div>
       <CrewBG />
 
-      <div></div>
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36">
+        <span className="text-xl font-extrabold text-gray-500 tracking-widest">
+          02
+        </span>
+        <p className="text-white font-normal text-xl tracking-widest uppercase">
+          meet your crew
+        </p>
+      </div>
+
+      <div>
+        <CrewComponent data={crew} />
+      </div>
     </div>
   );
 };

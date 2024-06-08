@@ -1,11 +1,11 @@
 "use client";
-import { DataProp } from "@/types/types";
+import { DestinationProps } from "@/types/types";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React, { useState } from "react";
 
 interface DestinationComponentProp {
-  data: DataProp[];
+  data: DestinationProps[];
 }
 
 const DestinationComponent: React.FC<DestinationComponentProp> = ({ data }) => {

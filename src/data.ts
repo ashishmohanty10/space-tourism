@@ -9,7 +9,17 @@ import TitanImgPng from "../public/destination/image-titan.png";
 import TitanImgWebp from "../public/destination/image-titan.webp";
 
 // Crew Images
+import DouglasharleyPng from "../public/crew/image-douglas-hurley.png";
 import DouglasHarleyWebp from "../public/crew/image-douglas-hurley.webp";
+import MarkShuttleworthPng from "../public/crew/image-mark-shuttleworth.png";
+import MarkShuttleworthWebp from "../public/crew/image-mark-shuttleworth.webp";
+import VictorGloverPng from "../public/crew/image-victor-glover.png";
+import VictorGloverWebp from "../public/crew/image-victor-glover.webp";
+import AnoushehAnsariPng from "../public/crew/image-anousheh-ansari.png";
+import AnoushehAnsariWebp from "../public/crew/image-anousheh-ansari.webp";
+
+// Technology images
+import LaunchVehicleLandscape from "../public/technology/image-launch-vehicle-landscape.jpg";
 
 export const destinations = [
   {
@@ -62,7 +72,7 @@ export const crew = [
   {
     name: "Douglas Hurley",
     images: {
-      png: "./assets/crew/image-douglas-hurley.png",
+      png: DouglasharleyPng,
       webp: DouglasHarleyWebp,
     },
     role: "Commander",
@@ -71,8 +81,8 @@ export const crew = [
   {
     name: "Mark Shuttleworth",
     images: {
-      png: "./assets/crew/image-mark-shuttleworth.png",
-      webp: "./assets/crew/image-mark-shuttleworth.webp",
+      png: MarkShuttleworthPng,
+      webp: MarkShuttleworthWebp,
     },
     role: "Mission Specialist",
     bio: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
@@ -80,8 +90,8 @@ export const crew = [
   {
     name: "Victor Glover",
     images: {
-      png: "./assets/crew/image-victor-glover.png",
-      webp: "./assets/crew/image-victor-glover.webp",
+      png: VictorGloverPng,
+      webp: VictorGloverWebp,
     },
     role: "Pilot",
     bio: "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.",
@@ -89,8 +99,8 @@ export const crew = [
   {
     name: "Anousheh Ansari",
     images: {
-      png: "./assets/crew/image-anousheh-ansari.png",
-      webp: "./assets/crew/image-anousheh-ansari.webp",
+      png: AnoushehAnsariPng,
+      webp: AnoushehAnsariWebp,
     },
     role: "Flight Engineer",
     bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.",
