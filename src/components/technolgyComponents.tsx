@@ -35,15 +35,24 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
             <div
               key={idx}
               className={cn(
-                `flex gap-x-10 ${currentTabs === idx ? "" : "hidden"}`
+                `flex gap-x-10 w-full items-center justify-between ${
+                  currentTabs === idx ? "" : "hidden"
+                }`
               )}
             >
-              <div>
-                <h2>{data.name}</h2>
+              <div className="w-1/2">
+                <h2 className="uppercase tracking-wide font-normal">
+                  the terminology
+                </h2>
+                <p>{data.name}</p>
                 <p className="w-[50%]">{data?.description}</p>
               </div>
-              <div>
-                <Image src={data?.images.portrait} alt="technolgy image" />
+              <div className="w-1/2">
+                <Image
+                  src={data?.images.portrait}
+                  alt="technolgy image"
+                  className=""
+                />
               </div>
             </div>
           ))}

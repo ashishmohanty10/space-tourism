@@ -47,7 +47,7 @@ const TechnologyBG = () => {
       <Image
         src={TechnologyDesktop}
         alt="homepage background"
-        className="hidden max-h-screen w-full object-cover xl:block"
+        className="hidden min-h-screen w-full object-cover xl:block"
       />
     </div>
   );

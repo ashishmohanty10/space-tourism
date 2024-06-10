@@ -17,10 +17,12 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
         {data.map((data, idx) => (
           <div
             className={cn(
-              `grid grid-cols-2 ${currentTabs === idx ? "" : "hidden"}`
+              `w-full flex justify-between items-center ${
+                currentTabs === idx ? "" : "hidden"
+              }`
             )}
           >
-            <div>
+            <div className="w-1/2">
               <h2 className="text-2xl text-slate-600 uppercase font-medium tracking-wide mb-8">
                 flight engineer
               </h2>
@@ -34,7 +36,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
               </p>
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center w-1/2">
               <Image
                 src={data?.images.webp}
                 alt="crew image"
@@ -45,7 +47,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
         ))}
       </div>
 
-      <div className="flex justify-start items-center gap-x-5 absolute bottom-40    ">
+      <div className="flex justify-start items-center gap-x-5 absolute bottom-28">
         {data.map((_, idx) => (
           <button
             onClick={() => setCurrentTabs(idx)}
