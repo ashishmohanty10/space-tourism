@@ -39,7 +39,7 @@ const TechnologyBG = () => {
       />
 
       <Image
-        src={Technologymobile}
+        src={TechnologyTablet}
         alt="homepage background for tablet"
         className="hidden md:block min-h-screen object-cover xl:hidden w-full"
       />
@@ -47,7 +47,7 @@ const TechnologyBG = () => {
       <Image
         src={TechnologyDesktop}
         alt="homepage background"
-        className="hidden min-h-screen w-full object-cover xl:block"
+        className="hidden max-h-screen w-full object-cover xl:block"
       />
     </div>
   );

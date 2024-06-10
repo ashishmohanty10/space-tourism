@@ -17,7 +17,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
         {data.map((data, idx) => (
           <div
             className={cn(
-              `w-full flex justify-between items-center ${
+              `w-full flex justify-between items-center gap-x-10 ${
                 currentTabs === idx ? "" : "hidden"
               }`
             )}
@@ -27,7 +27,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
                 flight engineer
               </h2>
 
-              <p className="text-5xl tracking-wider text-slate-200 mb-14">
+              <p className="text-5xl tracking-wider text-slate-200 mb-10">
                 {data?.name}
               </p>
 
@@ -40,7 +40,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
               <Image
                 src={data?.images.webp}
                 alt="crew image"
-                className="object-contain  h-[600px]"
+                className=" object-contain h-[600px]"
               />
             </div>
           </div>
