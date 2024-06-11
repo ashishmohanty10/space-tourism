@@ -15,7 +15,10 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
     <div className="xl:px-36 mx-auto flex flex-col">
       <div className="flex justify-between items-center relative order-2 xl:order-1">
         {data.map((data, idx) => (
-          <div className={cn(` ${currentTabs === idx ? "" : "hidden"}`)}>
+          <div
+            className={cn(` ${currentTabs === idx ? "" : "hidden"}`)}
+            key={idx}
+          >
             <div className="w-full xl:flex justify-between items-center gap-x-10 text-center xl:text-left">
               <div className="xl:w-1/2 mb-5 xl:mb-0">
                 <h2 className="text-2xl text-slate-600 uppercase font-medium tracking-wide xl:mb-8">
@@ -47,6 +50,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
       <div className="flex xl:justify-start items-center gap-x-5 justify-center xl:order-2 ">
         {data.map((_, idx) => (
           <button
+            key={idx}
             onClick={() => setCurrentTabs(idx)}
             className={cn(
               `w-[20px] h-[20px] rounded-full bg-slate-500 hover:bg-slate-200 ${

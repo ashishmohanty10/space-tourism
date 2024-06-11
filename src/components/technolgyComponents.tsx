@@ -18,6 +18,7 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
         <div className="flex xl:flex-col justify-center  xl:gap-y-10 gap-x-10 mb-10 xl:mb-0">
           {data.map((_, idx) => (
             <button
+              key={idx}
               onClick={() => setCurrentTabs(idx)}
               className={cn(
                 `w-[80px] h-[80px] rounded-full bg-black text-white border tect-2xl hover:bg-white hover:text-black flex items-center justify-center ${
