@@ -36,7 +36,7 @@ export default function Home() {
 }
 
 // Home page backgorund image
-export const BG = () => {
+const BG = () => {
   return (
     <div className="absolute top-0 left-0 w-full -z-20">
       <Image
