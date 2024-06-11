@@ -20,7 +20,7 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
             <button
               onClick={() => setCurrentTabs(idx)}
               className={cn(
-                `w-[80px] h-[80px] rounded-full bg-black text-white border tect-2xl hover:text-slate-200 flex items-center justify-center ${
+                `w-[80px] h-[80px] rounded-full bg-black text-white border tect-2xl hover:bg-white hover:text-black flex items-center justify-center ${
                   currentTabs === idx ? "bg-white text-black" : ""
                 }`
               )}
