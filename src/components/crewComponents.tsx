@@ -12,42 +12,39 @@ interface CrewComponentProp {
 const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
   const [currentTabs, setCurrentTabs] = useState(0);
   return (
-    <div className="">
-      <div className="flex justify-between items-center relative">
+    <div className="xl:px-36 mx-auto flex flex-col">
+      <div className="flex justify-between items-center relative order-2 xl:order-1">
         {data.map((data, idx) => (
-          <div
-            className={cn(
-              `w-full flex justify-between items-center gap-x-10 ${
-                currentTabs === idx ? "" : "hidden"
-              }`
-            )}
-          >
-            <div className="w-1/2">
-              <h2 className="text-2xl text-slate-600 uppercase font-medium tracking-wide mb-8">
-                flight engineer
-              </h2>
+          <div className={cn(` ${currentTabs === idx ? "" : "hidden"}`)}>
+            <div className="w-full xl:flex justify-between items-center gap-x-10 text-center xl:text-left">
+              <div className="xl:w-1/2 mb-5 xl:mb-0">
+                <h2 className="text-2xl text-slate-600 uppercase font-medium tracking-wide xl:mb-8">
+                  flight engineer
+                </h2>
 
-              <p className="text-5xl tracking-wider text-slate-200 mb-10">
-                {data?.name}
-              </p>
+                <p className="text-5xl tracking-wider text-slate-200 xl:mb-10 mb-5">
+                  {data?.name}
+                </p>
 
-              <p className="text-lg font-normal tracking-wide leading-6">
-                {data?.bio}
-              </p>
-            </div>
+                <p className="text-lg font-normal tracking-wide leading-6">
+                  {data?.bio}
+                </p>
+              </div>
 
-            <div className="flex justify-center items-center w-1/2">
-              <Image
-                src={data?.images.webp}
-                alt="crew image"
-                className=" object-contain h-[600px]"
-              />
+              <div className="flex justify-center items-center xl:w-1/2">
+                <Image
+                  src={data?.images.webp}
+                  alt="crew image"
+                  className=" object-contain xl:h-[600px] h-[400px]"
+                />
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-start items-center gap-x-5 absolute bottom-28">
+      {/* tab switchwer */}
+      <div className="flex xl:justify-start items-center gap-x-5 justify-center xl:order-2 ">
         {data.map((_, idx) => (
           <button
             onClick={() => setCurrentTabs(idx)}

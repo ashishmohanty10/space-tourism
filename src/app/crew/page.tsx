@@ -11,7 +11,7 @@ const Crewpage = () => {
     <div>
       <CrewBG />
 
-      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 mb-20">
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 mb-4 xl:mb-0">
         <span className="text-xl font-extrabold text-gray-500 tracking-widest">
           02
         </span>
@@ -20,7 +20,7 @@ const Crewpage = () => {
         </p>
       </div>
 
-      <div className="px-36 mx-auto">
+      <div className="">
         <CrewComponent data={crew} />
       </div>
     </div>

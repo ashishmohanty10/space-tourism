@@ -41,7 +41,7 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
                   <h2 className="uppercase tracking-wide font-normal mb-2">
                     the terminology
                   </h2>
-                  <p className="text-7xl uppercase tracking-widest mb-10">
+                  <p className="text-5xl xl:text-7xl uppercase tracking-widest mb-10">
                     {data.name}
                   </p>
                   <p className="xl:w-[80%] text-base tracking-wide leading-loose">
