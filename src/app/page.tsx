@@ -5,7 +5,7 @@ import HomeBGMobile from "../../public/home/background-home-mobile.jpg";
 export default function Home() {
   return (
     <div>
-      <HomePageBG />
+      <BG />
 
       <div className="w-full xl:flex justify-between items-center h-[80vh] text-white md:mt-44 xl:mt-0">
         <div className="xl:w-1/2 flex flex-col justify-between items-center xl:items-start mb-14 xl:mb-0">
@@ -36,7 +36,7 @@ export default function Home() {
 }
 
 // Home page backgorund image
-export const HomePageBG = () => {
+export const BG = () => {
   return (
     <div className="absolute top-0 left-0 w-full -z-20">
       <Image
