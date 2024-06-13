@@ -23,8 +23,6 @@ const Navbar = () => {
         <Image src={Logo} alt="Logo of the brand" sizes="40" />
       </Link>
 
-      <div className="hidden xl:block h-0.5 bg-slate-500 w-[98vh] left-48 absolute z-10"></div>
-
       <nav className="hidden xl:flex items-center gap-x-10 py-4 px-20 backdrop-blur-lg absolute right-0 h-[10vh]">
         {navLink.map((data, idx) => (
           <Link
@@ -43,37 +41,41 @@ const Navbar = () => {
       </nav>
 
       {/* mobile nav */}
-      <div className="xl:hidden relative  backdrop-blur-lg">
-        <div onClick={handleNavBar}>
-          {isNavOpen ? (
-            <Image src={Closehamburger} alt="Hamburger Icon" />
-          ) : (
-            <Image src={HamburgerIcon} alt="Hamburger Icon" />
-          )}
-        </div>
+      <div className="xl:hidden ">
+        <div className="absolute top-11 right-11 ">
+          <div onClick={handleNavBar}>
+            {isNavOpen ? (
+              <Image src={Closehamburger} alt="Hamburger Icon" />
+            ) : (
+              <Image src={HamburgerIcon} alt="Hamburger Icon" />
+            )}
+          </div>
 
-        <nav className="absolute  top-12 right-2 z-20">
-          {isNavOpen ? (
-            <div className="flex flex-col justify-between gap-y-10">
-              {navLink.map((data, idx) => (
-                <Link
-                  href={data.href}
-                  className={cn(
-                    `flex space-x-2 items-center text-slate-200 uppercase tracking-widest text-sm  ${
-                      pathname === data.href ? "border-b border-slate-400" : ""
-                    }`
-                  )}
-                  key={idx}
-                >
-                  <span className="">{data.number}</span>
-                  <span className="text-normal">{data.label}</span>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            ""
-          )}
-        </nav>
+          <nav className="absolute  top-12 right-2 z-20">
+            {isNavOpen ? (
+              <div className="flex flex-col justify-between gap-y-10 backdrop-blur-lg px-5 py-5 rounded-lg ">
+                {navLink.map((data, idx) => (
+                  <Link
+                    href={data.href}
+                    className={cn(
+                      `flex space-x-2 items-center text-slate-200 uppercase tracking-widest text-sm  ${
+                        pathname === data.href
+                          ? "border-b border-slate-400"
+                          : ""
+                      }`
+                    )}
+                    key={idx}
+                  >
+                    <span className="">{data.number}</span>
+                    <span className="text-normal">{data.label}</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              ""
+            )}
+          </nav>
+        </div>
       </div>
     </header>
   );

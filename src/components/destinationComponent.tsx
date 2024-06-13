@@ -12,14 +12,14 @@ const DestinationComponent: React.FC<DestinationComponentProp> = ({ data }) => {
   const [currentTabs, setCurrentTabs] = useState(0);
 
   return (
-    <div className="px-36 mx-auto">
+    <div className="md:px-36 mx-auto">
       <div className="flex xl:justify-end justify-center gap-x-14 xl:-w-[50%]  mb-10">
         {data.map((data, idx) => (
           <div key={idx}>
             <button
               onClick={() => setCurrentTabs(idx)}
               className={cn(
-                `h-[5vh] tracking-widest font-normal text-base uppercase text-slate-200 ${
+                `h-[5vh] tracking-widest font-normal text-xs md:text-base uppercase text-slate-200 ${
                   currentTabs === idx ? "border-b border-slate-400" : ""
                 }`
               )}
@@ -41,12 +41,12 @@ const DestinationComponent: React.FC<DestinationComponentProp> = ({ data }) => {
                 <Image
                   src={data.images.webp}
                   alt="Destination Image"
-                  className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] xl:w-[400px] xl:h-[400px]"
+                  className="w-[200px] h-[200px] md:w-[500px] md:h-[500px] xl:w-[400px] xl:h-[400px]"
                 />
               </div>
 
               <div className="xl:w-1/2 flex flex-col gap-y-4 ">
-                <h2 className="text-8xl mb-8 font-normal uppercase tracking-wider text-center xl:text-start">
+                <h2 className="text-4xl md:text-8xl mb-8 font-normal uppercase tracking-wider text-center xl:text-start">
                   {data.name}
                 </h2>
 
