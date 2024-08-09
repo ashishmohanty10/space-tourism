@@ -9,19 +9,19 @@ interface TechnologyComponentProp {
   data: TechnologyProp[];
 }
 
-const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
+const TechnologyComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
   const [currentTabs, setCurrentTabs] = useState(0);
 
   return (
     <div>
-      <div className="xl:flex xl:justify-between  items-center gap-x-10">
-        <div className="flex xl:flex-col justify-center  xl:gap-y-10 gap-x-10 mb-10 xl:mb-0">
+      <div className="xl:flex xl:justify-between items-center gap-x-10">
+        <div className="flex xl:flex-col justify-center xl:gap-y-10 gap-x-10 mt-5  mb-5 md:mb-10 xl:mb-0 md:mt-0">
           {data.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentTabs(idx)}
               className={cn(
-                `w-[80px] h-[80px] rounded-full bg-black text-white border tect-2xl hover:bg-white hover:text-black flex items-center justify-center ${
+                `w-[40px] h-[40px] md:w-[80px] md:h-[80px] rounded-full bg-black text-white border tect-2xl hover:bg-white hover:text-black flex items-center justify-center ${
                   currentTabs === idx ? "bg-white text-black" : ""
                 }`
               )}
@@ -42,7 +42,7 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
                   <h2 className="uppercase tracking-wide font-normal mb-2">
                     the terminology
                   </h2>
-                  <p className="text-5xl xl:text-7xl uppercase tracking-widest mb-10">
+                  <p className="text-3xl xl:text-7xl uppercase tracking-widest mb-2 md:mb-10">
                     {data.name}
                   </p>
                   <p className="xl:w-[80%] text-base tracking-wide leading-loose">
@@ -72,4 +72,4 @@ const TechnologuComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
   );
 };
 
-export default TechnologuComponent;
+export default TechnologyComponent;

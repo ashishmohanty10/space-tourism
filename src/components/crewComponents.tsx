@@ -34,11 +34,11 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
                 </p>
               </div>
 
-              <div className="flex justify-center items-center xl:w-1/2">
+              <div className="flex justify-center items-center">
                 <Image
                   src={data?.images.webp}
                   alt="crew image"
-                  className=" object-contain xl:h-[600px] h-[400px]"
+                  className=" object-contain md:h-[600px] h-[300px]"
                 />
               </div>
             </div>
@@ -53,7 +53,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
             key={idx}
             onClick={() => setCurrentTabs(idx)}
             className={cn(
-              `w-[20px] h-[20px] rounded-full bg-slate-500 hover:bg-slate-200 ${
+              `w-[20px] h-[20px] rounded-full bg-slate-500 hover:bg-slate-200 mb-2 ${
                 currentTabs === idx ? "bg-slate-200" : ""
               }`
             )}

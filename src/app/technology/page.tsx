@@ -3,7 +3,7 @@ import TechnologyDesktop from "../../../public/technology/background-technology-
 import TechnologyTablet from "../../../public/technology/background-technology-tablet.jpg";
 import Technologymobile from "../../../public/technology/background-technology-mobile.jpg";
 import Image from "next/image";
-import TechnologuComponent from "@/components/technolgyComponents";
+import TechnologyComponent from "@/components/technolgyComponents";
 import { technology } from "@/data";
 
 const Crewpage = () => {
@@ -11,7 +11,7 @@ const Crewpage = () => {
     <div>
       <TechnologyBG />
 
-      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 mb-20">
+      <div className="flex justify-center xl:justify-start items-center gap-x-5 xl:px-36 md:mb-20">
         <span className="text-xl font-extrabold text-gray-500 tracking-widest">
           03
         </span>
@@ -21,7 +21,7 @@ const Crewpage = () => {
       </div>
 
       <div>
-        <TechnologuComponent data={technology} />
+        <TechnologyComponent data={technology} />
       </div>
     </div>
   );
