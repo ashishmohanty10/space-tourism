@@ -4,6 +4,7 @@ import { TechnologyProp } from "@/types/types";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React, { useState } from "react";
+import * as motion from "framer-motion/client";
 
 interface TechnologyComponentProp {
   data: TechnologyProp[];
@@ -33,11 +34,19 @@ const TechnologyComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
 
         <div>
           {data.map((data, idx) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: currentTabs === idx ? 1 : 0 }}
+              transition={{ duration: 0.5 }}
               key={idx}
               className={cn(` ${currentTabs === idx ? "" : "hidden"}`)}
             >
-              <div className="xl:flex gap-x-10 w-full items-center justify-between">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
+                animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                transition={{ duration: 0.35 }}
+                className="xl:flex gap-x-10 w-full items-center justify-between"
+              >
                 <div className="xl:w-[60%] mb-10 xl:mb-0 text-center xl:text-left">
                   <h2 className="uppercase tracking-wide font-normal mb-2">
                     the terminology
@@ -63,8 +72,8 @@ const TechnologyComponent: React.FC<TechnologyComponentProp> = ({ data }) => {
                     className="xl:hidden object-contain"
                   />
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>

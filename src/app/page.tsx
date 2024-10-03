@@ -1,11 +1,17 @@
 import { BG } from "@/components/homeBG";
+import * as motion from "framer-motion/client";
 
 export default function Home() {
   return (
     <div>
       <BG />
 
-      <div className="w-full xl:flex justify-between items-center h-[80vh] text-white md:mt-44 xl:mt-0">
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
+        animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.35 }}
+        className="w-full xl:flex justify-between items-center h-[80vh] text-white md:mt-44 xl:mt-0"
+      >
         <div className="xl:w-1/2 flex flex-col justify-between items-center xl:items-start mb-14 xl:mb-0">
           <h2 className="uppercase text-lg lg:text-sm md:mb-10 mb-4">
             So, you want to travel to
@@ -28,7 +34,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

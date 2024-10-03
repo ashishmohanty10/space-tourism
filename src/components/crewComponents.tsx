@@ -4,6 +4,7 @@ import { CrewMemberProp } from "@/types/types";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React, { useState } from "react";
+import * as motion from "framer-motion/client";
 
 interface CrewComponentProp {
   data: CrewMemberProp[];
@@ -15,7 +16,10 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
     <div className="xl:px-36 mx-auto flex flex-col">
       <div className="flex justify-between items-center relative order-2 xl:order-1">
         {data.map((data, idx) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: currentTabs === idx ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
             className={cn(` ${currentTabs === idx ? "" : "hidden"}`)}
             key={idx}
           >
@@ -42,7 +46,7 @@ const CrewComponent: React.FC<CrewComponentProp> = ({ data }) => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
